@@ -1,0 +1,11 @@
+/* ==============   Banner    =================== */
+bannerImg {
+  place-self: center;
+  padding: 0 2rem;
+  max-width: 70rem;
+}
+.banner__img {
+  width: 90%;
+  height: auto;
+  margin-left: 2rem;
+}

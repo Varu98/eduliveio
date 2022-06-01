@@ -24,4 +24,28 @@ export const categories = [
     description:
       "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
   },
+  {
+    _id: uuid(),
+    categoryName: "Javascript",
+    description:
+      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Jobs",
+    description:
+      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Hiring",
+    description:
+      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "College",
+    description:
+      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+  },
 ];
