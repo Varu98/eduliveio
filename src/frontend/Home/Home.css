@@ -9,17 +9,18 @@
 .grid-wrapper {
   display: grid;
   grid-template-columns: 15rem 1fr;
-  grid-template-rows: 35rem 25rem;
+  grid-template-rows: 35rem 1fr;
   margin-bottom: 2rem;
   background-color: #052231;
 }
 
 /* Video Thumbnails */
 videoRow {
-  grid-row: 2;
-  grid-column: 2;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1rem;
-  padding: 0 0 0 2rem;
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
 }

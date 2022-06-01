@@ -12,7 +12,7 @@ export const videos = [
     views: "3.5K views",
     title: "What are the skills to look in your next hire?",
     timestamp: "1 month ago",
-    thumbnailUrl:
+    thumbnail_imgUrl:
       "https://i.ytimg.com/vi/hQ5wo0nRgW8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCyOWMT8wwszfRDL7ki9c-KA3s2Fg",
     author_miniImgUrl:
       "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s68-c-k-c0x00ffffff-no-rj",
@@ -25,8 +25,8 @@ export const videos = [
     title:
       "HOW to write your First CLI App: Intro to programming | Tanay Pratap",
     timestamp: "1 year ago",
-    thumbnailUrl:
-      "https://i.ytimg.com/vi/_L-UszPmy2A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBK-Eytrp5SAq5A_3LPEdOJg1hGrQ",
+    thumbnail_imgUrl:
+      "https://i.ytimg.com/vi/_L-UszPmy2A/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGctbqQiLkRTgW4wkCgDqfBPR7NQ",
     author_miniImgUrl:
       "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s68-c-k-c0x00ffffff-no-rj",
   },
@@ -37,8 +37,8 @@ export const videos = [
     views: "10K views",
     title: "Does CGPA matter for getting a job?",
     timestamp: "1 year ago",
-    thumbnailUrl:
-      "https://i.ytimg.com/vi/fsQK27PjO8M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtIkb2WHy40d1DtML3lDyUDq122w",
+    thumbnail_imgUrl:
+      "https://i.ytimg.com/vi/fsQK27PjO8M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBeGNZ5EpUm9x5-SOveZoTMOSuosQ",
     author_miniImgUrl:
       "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s68-c-k-c0x00ffffff-no-rj",
   },
@@ -50,7 +50,7 @@ export const videos = [
     title: "Getting started with React Hooks",
     timestamp: "1 year ago",
     thumbnail_imgUrl:
-      "https://i.ytimg.com/vi/Icr3pGbz3iE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuzFGnUWCsmYdpx2md2vlYSJ4urQ",
+      "https://i.ytimg.com/vi/Icr3pGbz3iE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCh23yCMm_AiwbBlxP5wkyc_mhfXQ",
     author_miniImgUrl:
       "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s68-c-k-c0x00ffffff-no-rj",
   },
@@ -184,9 +184,21 @@ export const videos = [
     categoryName: "Backend Development",
     views: "291K views",
     title: "Backend Development explained in 2 minutes // Tech in 2",
-    timestamp: "2 year ago",
+    timestamp: "2 years ago",
     thumbnail_imgUrl:
       "https://i.ytimg.com/vi/cbSrsYiRamo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2S8_5eeAPCpjIQPyd1xgr7yc-Vg",
+    author_miniImgUrl:
+      "https://yt3.ggpht.com/mjNkmL_jtTy0nEdVnjPw_xN4Bknadpv6_PkmO_B79yTr1xvyB5IVYYsklcR1PK3ez_d1AOKMPQ=s68-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    id: "qyHyFsT7Hig",
+    author: "mayuko",
+    categoryName: "Frontend Development",
+    views: "202K views",
+    title: "Backend Development explained in 2 minutes // Tech in 2",
+    timestamp: "2 years ago",
+    thumbnail_imgUrl:
+      "https://i.ytimg.com/vi/qyHyFsT7Hig/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuArvvd7YPV3gb4fEwFxT6TdA40A",
     author_miniImgUrl:
       "https://yt3.ggpht.com/mjNkmL_jtTy0nEdVnjPw_xN4Bknadpv6_PkmO_B79yTr1xvyB5IVYYsklcR1PK3ez_d1AOKMPQ=s68-c-k-c0x00ffffff-no-rj",
   },
@@ -213,5 +225,30 @@ export const videos = [
       "https://i.ytimg.com/vi/nknwAOtmtDk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_Fa0KUziH-xUnq-kyKwm0fvY3Ow",
     author_miniImgUrl:
       "https://yt3.ggpht.com/ytc/AKedOLT3EnMXtIOvDT4CL7obl0-acSZCBhMuapXBQFksVQ=s68-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    id: "WfyQ7HhnGfQ&",
+    author: "Career Leap",
+    categoryName: "Frontend Development",
+    views: "1.2M views",
+    title:
+      "How To Showcase Your Work As A Developer & Get Opportunities | Out Of Syllabus Ep - 01",
+    timestamp: "3 months ago",
+    thumbnail_imgUrl:
+      "https://i.ytimg.com/vi/WfyQ7HhnGfQ/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCyRcMDS9DxRUnHCGIW0tEBDx0cjQ",
+    author_miniImgUrl:
+      "https://yt3.ggpht.com/xPMi2J11x3IyCs_MuSw_Kea615PBgbvlhvt6yWoZdsR9G8LI8Swo2ODArBZ-BDSV6BcB9Vzlv60=s68-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    id: "TGS0zeLEnkA&",
+    author: "Git-up with Saumya",
+    categoryName: "Frontend Development",
+    views: "6.1k views",
+    title: "How's she Building her own Startup from Scratch ft Yogini 🔥️",
+    timestamp: "2 months ago",
+    thumbnail_imgUrl:
+      "https://i.ytimg.com/vi/TGS0zeLEnkA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCl5q_2dKNoyNtuRk_T460LB4DItQ",
+    author_miniImgUrl:
+      "https://yt3.ggpht.com/rHjgRIGauy1ix1CTWdsnwo4eyfGmhFe_dXs3Hpnmm0rX-2T05lC7Nz66PAcA00KXJDWUNlWwEQ=s68-c-k-c0x00ffffff-no-rj",
   },
 ];

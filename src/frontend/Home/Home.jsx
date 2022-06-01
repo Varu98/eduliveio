@@ -14,9 +14,6 @@ const Home = () => {
         <BannerVideo />
         <videoRow>
           <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
         </videoRow>
       </div>
     </div>
