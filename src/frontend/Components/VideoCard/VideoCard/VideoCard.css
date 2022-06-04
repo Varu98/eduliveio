@@ -1,0 +1,50 @@
+videoCard {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  max-width: 20rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+videoCard:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+videoCard .thumbnail__img {
+  height: 80%;
+}
+videoCard .card-body img {
+  width: 3rem;
+  height: 80%;
+  border-radius: 100%;
+}
+videoCard .card-body {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  text-align: start;
+}
+
+videoCard .card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px;
+}
+.card-footer h4 {
+  flex: 0 1 90%;
+}
+.card-footer .views,
+.upload-time {
+  flex: 0 1 40%;
+  text-align: start;
+  color: rgba(255, 255, 255, 0.562);
+  font-size: 0.8rem;
+}
+.card-footer .author {
+  color: rgba(255, 255, 255, 0.562);
+  flex: 0 1 100%;
+  text-align: start;
+  font-size: 0.8rem;
+}

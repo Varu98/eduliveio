@@ -1,0 +1,66 @@
+navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #023047;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  font-family: "Montserrat";
+}
+.logo span {
+  color: #fb8500;
+}
+/* Navbar Login Menu */
+.login-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Navbar Login Avatar */
+.login-avatar {
+  height: 100%;
+  width: 20%;
+  border-radius: 100%;
+}
+/* Navbar Login Menu Button Wrapper */
+.login-btn__wrapper {
+  display: flex;
+}
+/* Navbar Login Menu Buttons */
+.btn-login {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #fb8600;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 5rem;
+  height: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 1rem;
+}
+.btn-logout {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #219ebc;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 5rem;
+  height: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 1rem;
+}

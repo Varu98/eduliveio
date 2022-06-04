@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,800&display=swap");
+
+/* ==============   Navigation    =================== */
+
+/* ============== Grid Wrapper    =================== */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 32rem 3rem 1fr;
+  margin-left: 15rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1rem;
+}
+
+/* Video Thumbnails */
+videoRow {
+  grid-row: 3 / span 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+}
