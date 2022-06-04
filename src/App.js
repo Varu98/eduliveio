@@ -1,10 +1,16 @@
 import "./App.css";
-import Home from "./frontend/Home/Home";
+import Navbar from "./frontend/Components/Navbar/Navbar";
+import SideBar from "./frontend/Components/SideBar/SideBar";
+import Router from "./frontend/Routes/Router";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Navbar />
+      <SideBar />
+      <div className="wrapper">
+        <Router />
+      </div>
     </div>
   );
 }

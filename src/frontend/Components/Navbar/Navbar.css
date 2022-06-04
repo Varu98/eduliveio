@@ -4,8 +4,11 @@ navigation {
   align-items: center;
   background-color: #023047;
   color: whitesmoke;
-  padding: 2rem 1rem;
-  border-bottom: 2px solid #052231;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -37,15 +40,14 @@ navigation {
   justify-content: center;
   align-items: center;
   border: none;
-  background: #fb8500;
+  background: #fb8600;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  width: 7rem;
-  height: 3rem;
-  color: whitesmoke;
-  padding: 1rem;
+  width: 5rem;
+  height: 2rem;
+  color: rgb(255, 255, 255);
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .btn-logout {
   cursor: pointer;
@@ -56,10 +58,9 @@ navigation {
   background: #219ebc;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  width: 7rem;
-  height: 3rem;
-  color: whitesmoke;
-  padding: 1rem;
+  width: 5rem;
+  height: 2rem;
+  color: rgb(255, 255, 255);
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }

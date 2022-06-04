@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SideBar.css";
 
 const SideBar = () => {
   return (
     <sideBar>
       <div class="sidebar__wrapper">
-        <a href="#">
+        <Link to="/">
           <span>
             <img
               class="sidebar__icons"
@@ -14,8 +15,8 @@ const SideBar = () => {
             />
           </span>
           Home
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="trending">
           <span>
             <img
               class="sidebar__icons"
@@ -24,11 +25,11 @@ const SideBar = () => {
             />
           </span>
           Trending
-        </a>
+        </Link>
 
         <hr />
 
-        <a href="#">
+        <Link to="history">
           <span>
             <img
               class="sidebar__icons"
@@ -37,8 +38,8 @@ const SideBar = () => {
             />
           </span>
           History
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="playlist">
           <span>
             <img
               class="sidebar__icons"
@@ -47,8 +48,8 @@ const SideBar = () => {
             />
           </span>
           Playlist
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="likedvideos">
           <span>
             <img
               class="sidebar__icons"
@@ -57,8 +58,8 @@ const SideBar = () => {
             />
           </span>
           Liked Videos
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="watchlater">
           <span>
             <img
               class="sidebar__icons"
@@ -67,7 +68,7 @@ const SideBar = () => {
             />
           </span>
           Watch Later
-        </a>
+        </Link>
       </div>
     </sideBar>
   );

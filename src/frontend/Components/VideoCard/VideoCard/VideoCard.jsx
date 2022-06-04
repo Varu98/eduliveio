@@ -21,16 +21,16 @@ const VideoCard = () => {
         return (
           <videoCard key={id}>
             <div class="thumbnail">
-              <img src={thumbnail_imgUrl} alt="" />
+              <img class="thumbnail__img" src={thumbnail_imgUrl} alt="" />
             </div>
             <div class="card-body">
               <img src={author_miniImgUrl} alt="" />
-              <h3>{title}</h3>
-            </div>
-            <div class="card-footer">
-              <span class="views">{views}</span>
-              <span class="upload-time">{timestamp}</span>
-              <span class="author">{author}</span>
+              <div class="card-footer">
+                <h4>{title}</h4>
+                <span class="views">{views}</span>
+                <span class="upload-time">{timestamp}</span>
+                <span class="author">{author}</span>
+              </div>
             </div>
           </videoCard>
         );

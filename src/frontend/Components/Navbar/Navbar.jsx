@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -8,9 +9,11 @@ const Navbar = () => {
   return (
     <navigation>
       <div class="logo">
-        <h2>
-          <span>Edu</span>Live.io
-        </h2>
+        <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
+          <h2>
+            <span>Edu</span>Live.io
+          </h2>
+        </Link>
       </div>
       <div class="login-menu">
         <img class="login-avatar" src="./assets/Group 3.jpg" alt="" />

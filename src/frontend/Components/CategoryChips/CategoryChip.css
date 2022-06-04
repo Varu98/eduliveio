@@ -1,0 +1,19 @@
+.category-chips {
+  grid-row: 2 / 2;
+  color: aliceblue;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-left: 3rem;
+  margin: auto 3rem;
+}
+.chip {
+  background-color: #023047;
+  border-radius: 50px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.chip:hover {
+  background-color: #fb8600;
+  color: rgb(255, 255, 255);
+}

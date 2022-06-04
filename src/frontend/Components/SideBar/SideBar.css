@@ -10,6 +10,8 @@ sideBar {
   max-width: 15rem;
   height: 100vh;
   padding: 1rem;
+  position: fixed;
+  top: 4rem;
 }
 
 sidebar a {
