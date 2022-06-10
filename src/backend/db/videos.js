@@ -243,7 +243,7 @@ export const videos = [
     id: "TGS0zeLEnkA&",
     author: "Git-up with Saumya",
     categoryName: "Frontend Development",
-    views: "6.1k views",
+    views: "6.1K views",
     title: "How's she Building her own Startup from Scratch ft Yogini 🔥️",
     timestamp: "2 months ago",
     thumbnail_imgUrl:

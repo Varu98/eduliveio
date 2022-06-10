@@ -1,5 +1,14 @@
 import axios from "axios";
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useReducer,
+} from "react";
+import { reduceToTrending } from "../Services/reduceToTrending";
+import { filterReducer, initialVideoState } from "../Reducers/filterReducer";
+import { reduceByChipFilter } from "../Services/reduceByChipFilter";
 
 const videoContext = createContext(null);
 
@@ -33,8 +42,25 @@ const VideoProvider = ({ children }) => {
     }
   }, []);
 
+  const [filterState, filterDispatch] = useReducer(
+    filterReducer,
+    initialVideoState
+  );
+
+  const chipFilterOnVideos = reduceByChipFilter(filterState, videoData);
+
+  const filterVideos = reduceToTrending(filterState, chipFilterOnVideos);
+
   return (
-    <videoContext.Provider value={{ videoData, categoriesData }}>
+    <videoContext.Provider
+      value={{
+        videoData,
+        categoriesData,
+        filterState,
+        filterDispatch,
+        filterVideos,
+      }}
+    >
       {children}
     </videoContext.Provider>
   );

@@ -1,14 +1,13 @@
 import React from "react";
-import { useVideos } from "../../../Context/VideoContext";
+import { useVideos } from "../../Context/VideoContext";
 import "./VideoCard.css";
 
 const VideoCard = () => {
-  const { videoData } = useVideos();
+  const { filterVideos } = useVideos();
 
-  console.log(videoData);
   return (
     <>
-      {videoData.map((videos) => {
+      {filterVideos.map((videos) => {
         const {
           author,
           author_miniImgUrl,
