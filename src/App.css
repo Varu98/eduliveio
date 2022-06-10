@@ -9,3 +9,11 @@
   margin-left: 15rem;
   height: 100vh;
 }
+.grid-autofit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+}

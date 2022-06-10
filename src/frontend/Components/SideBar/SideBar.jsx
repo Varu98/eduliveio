@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useVideos } from "../../Context/VideoContext";
 import "./SideBar.css";
 
 const SideBar = () => {
+  const { filterDispatch } = useVideos();
   return (
     <sideBar>
       <div class="sidebar__wrapper">
-        <Link to="/">
+        <Link
+          onClick={() => {
+            console.log("clicked");
+            filterDispatch({ type: "HOME" });
+          }}
+          to="/"
+        >
           <span>
             <img
               class="sidebar__icons"
@@ -16,7 +24,12 @@ const SideBar = () => {
           </span>
           Home
         </Link>
-        <Link to="trending">
+        <Link
+          onClick={() => {
+            filterDispatch({ type: "TRENDING" });
+          }}
+          to="filter"
+        >
           <span>
             <img
               class="sidebar__icons"
