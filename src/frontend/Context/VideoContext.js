@@ -8,6 +8,7 @@ import {
 } from "react";
 import { reduceToTrending } from "../Services/reduceToTrending";
 import { filterReducer, initialVideoState } from "../Reducers/filterReducer";
+import { reduceByChipFilter } from "../Services/reduceByChipFilter";
 
 const videoContext = createContext(null);
 
@@ -17,7 +18,6 @@ const VideoProvider = ({ children }) => {
   // using useState hook to set the data in state
   const [videoData, setVideosData] = useState([]);
   const [categoriesData, setCategoriesData] = useState([]);
-  console.log(categoriesData);
 
   //   calling the videos data
   useEffect(() => {
@@ -47,7 +47,9 @@ const VideoProvider = ({ children }) => {
     initialVideoState
   );
 
-  const filterVideos = reduceToTrending(filterState, videoData);
+  const chipFilterOnVideos = reduceByChipFilter(filterState, videoData);
+
+  const filterVideos = reduceToTrending(filterState, chipFilterOnVideos);
 
   return (
     <videoContext.Provider

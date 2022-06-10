@@ -1,9 +1,6 @@
 export const reduceToTrending = (state, videos) => {
   const { byTrending } = state;
   let videosCopy = [...videos];
-  console.log(videos);
-  console.log(videosCopy);
-
   if (byTrending === "TRENDING") {
     return videosCopy.sort(
       (a, b) =>

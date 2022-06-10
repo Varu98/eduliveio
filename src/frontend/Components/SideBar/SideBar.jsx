@@ -10,7 +10,6 @@ const SideBar = () => {
       <div class="sidebar__wrapper">
         <Link
           onClick={() => {
-            console.log("clicked");
             filterDispatch({ type: "HOME" });
           }}
           to="/"
