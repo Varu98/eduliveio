@@ -1,7 +1,7 @@
 import React from "react";
 import { useVideos } from "../../Context/VideoContext";
 import "./VideoCard.css";
-
+import MoreOptionsModal from "./MoreOptionsModal/MoreOptionsModal";
 const VideoCard = () => {
   const { filterVideos } = useVideos();
 
@@ -26,6 +26,7 @@ const VideoCard = () => {
               <img src={author_miniImgUrl} alt="" />
               <div class="card-footer">
                 <h4>{title}</h4>
+                <MoreOptionsModal />
                 <span class="views">{views}</span>
                 <span class="upload-time">{timestamp}</span>
                 <span class="author">{author}</span>

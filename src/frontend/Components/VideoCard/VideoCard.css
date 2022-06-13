@@ -5,10 +5,11 @@ videoCard {
   color: whitesmoke;
   max-width: 20rem;
   font-family: "Roboto Condensed", sans-serif;
+  border-radius: 5px;
 }
 videoCard:hover {
   transform: scale(1.03);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 videoCard .thumbnail__img {
