@@ -7,7 +7,7 @@ const SideBar = () => {
   const { filterDispatch } = useVideos();
   return (
     <sideBar>
-      <div class="sidebar__wrapper">
+      <div style={{ FontFace: "Montserrat" }} class="sidebar__wrapper">
         <Link
           onClick={() => {
             filterDispatch({ type: "HOME" });

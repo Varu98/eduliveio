@@ -1,7 +1,13 @@
 import React from "react";
+import LoginPage from "../../Auth/LoginPage";
+import SignupPage from "../../Auth/SignupPage";
 
 const WatchLater = () => {
-  return <div>WatchLater</div>;
+  return (
+    <>
+      <LoginPage />
+    </>
+  );
 };
 
 export default WatchLater;

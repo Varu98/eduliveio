@@ -1,0 +1,107 @@
+.input_form {
+  display: flex;
+  flex-direction: column;
+  border: 5px dotted #023047;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+  background-color: #023047;
+  max-width: 20rem;
+  gap: 1rem;
+}
+.mt {
+  margin-top: 15rem;
+}
+.input_fieldset {
+  border: none;
+  margin-top: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input_fieldset label {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  align-self: flex-start;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+}
+
+.input_fieldset > input:focus ~ label {
+  color: #fb8600;
+}
+
+.input_fieldset input {
+  order: 1;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #023047;
+  border-radius: 5px;
+}
+
+.input_fieldset > input:focus {
+  background-color: #f0ffff;
+}
+.input_fieldset span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  visibility: hidden;
+}
+
+.input_fieldset.success .check_icon {
+  color: green;
+  visibility: visible;
+}
+.input_fieldset.error .cross_icon {
+  color: red;
+  visibility: visible;
+}
+.form__btn-login {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  border: none;
+  background-color: #fb8600;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  min-width: 10rem;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 1rem;
+}
+.form__btn-login:hover {
+  background: rgba(255, 255, 255, 0.521);
+  color: #fff;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.form__btn-submit {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  border: none;
+  background: #219ebc;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  min-width: 10rem;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 1rem;
+}
+.form__btn-submit:hover {
+  background-color: rgba(255, 255, 255, 0.521);
+  color: #fff;
+  transform: scale(1.1);
+  transition: 0.3s;
+}

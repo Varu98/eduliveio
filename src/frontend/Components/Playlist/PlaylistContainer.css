@@ -1,0 +1,34 @@
+.playlist__container {
+  background-color: black;
+  max-width: 20rem;
+  max-height: 17rem;
+  height: auto;
+  position: relative;
+  margin: 1rem 0;
+}
+.playlist-container__thumbnail {
+  width: 100%;
+  height: 100%;
+}
+.playlist-container__thumbnail img {
+  width: 100%;
+}
+.playlist__length {
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.76);
+  height: 80%;
+  width: 7rem;
+  position: absolute;
+}
+.playlist__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+.playlist__name {
+  color: antiquewhite;
+}
