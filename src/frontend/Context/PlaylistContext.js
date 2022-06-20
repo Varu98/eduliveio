@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const { createContext } = require("react");
 
