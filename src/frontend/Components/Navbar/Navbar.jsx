@@ -1,11 +1,15 @@
 import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const {
+    authState: { isLoggedIn },
+    authDispatch,
+  } = useAuth();
 
+  const navigate = useNavigate();
   return (
     <navigation>
       <div class="logo">
@@ -20,14 +24,21 @@ const Navbar = () => {
         <div class="login-btn__wrapper">
           {isLoggedIn ? (
             <button
-              onClick={() => setIsLoggedIn((prevState) => !prevState)}
+              onClick={() => {
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+                authDispatch({ type: "LOGOUT" });
+                navigate("/");
+              }}
               class="btn-logout"
             >
               Logout
             </button>
           ) : (
             <button
-              onClick={() => setIsLoggedIn((prevState) => !prevState)}
+              onClick={() => {
+                navigate("/login");
+              }}
               class="btn-login"
             >
               Login
