@@ -1,7 +1,11 @@
 import React from "react";
 
 const WatchLater = () => {
-  return <div>WatchLater</div>;
+  return (
+    <>
+      <div>Watch Later</div>
+    </>
+  );
 };
 
 export default WatchLater;
