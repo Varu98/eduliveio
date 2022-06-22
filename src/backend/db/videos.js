@@ -249,6 +249,6 @@ export const videos = [
     thumbnail_imgUrl:
       "https://i.ytimg.com/vi/TGS0zeLEnkA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCl5q_2dKNoyNtuRk_T460LB4DItQ",
     author_miniImgUrl:
-      "https://yt3.ggpht.com/rHjgRIGauy1ix1CTWdsnwo4eyfGmhFe_dXs3Hpnmm0rX-2T05lC7Nz66PAcA00KXJDWUNlWwEQ=s68-c-k-c0x00ffffff-no-rj",
+      "https://yt3.ggpht.com/tnPJTQNtUCfJImQ7f-0lLqy7XZNJ6fcUCXiBJbYhY3QyVSPowCw4a3UFox5PDe12urKj1yVp=s68-c-k-c0x00ffffff-no-rj",
   },
 ];

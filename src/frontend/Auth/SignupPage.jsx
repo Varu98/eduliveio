@@ -3,14 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { signupService } from "../Services/signupService";
 import "./SignupPage.css";
 const SignupPage = () => {
-  const [signupData, setSignupData] = useState([
-    {
-      fName: "",
-      lName: "",
-      password: "",
-      email: "",
-    },
-  ]);
+  const [signupData, setSignupData] = useState({
+    fName: "",
+    lName: "",
+    password: "",
+    email: "",
+  });
   const signupDataHandler = (e) => {
     const { name, value } = e.target;
     setSignupData((prevSignupData) => ({ ...prevSignupData, [name]: value }));

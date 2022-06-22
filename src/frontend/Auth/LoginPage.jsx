@@ -5,7 +5,7 @@ import { loginService } from "../Services/loginService";
 import "./LoginPage.css";
 
 const LoginPage = () => {
-  const [loginData, setLoginData] = useState([{ email: "", password: "" }]);
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
   const { authDispatch } = useAuth();
 
   const navigate = useNavigate();
