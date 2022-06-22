@@ -44,16 +44,16 @@ export const signupHandler = function (schema, request) {
     const encodedToken = sign({ _id, email }, process.env.REACT_APP_JWT_SECRET);
     return new Response(201, {}, { createdUser, encodedToken });
   } catch (error) {
-    return new Response(
-      500,
-      {},
-      {
-        error,
-      }
-    );
+    console.log(error.response.data);
   }
 };
-
+// return new Response(
+//   500,
+//   {},
+//   {
+//     error,
+//   }
+// );
 /**
  * This handler handles user login.
  * send POST Request at /api/auth/login
@@ -89,12 +89,13 @@ export const loginHandler = function (schema, request) {
       }
     );
   } catch (error) {
-    return new Response(
-      500,
-      {},
-      {
-        error,
-      }
-    );
+    console.log(error.response.data);
   }
 };
+// return new Response(
+//   500,
+//   {},
+//   {
+//     error,
+//   }
+// );
