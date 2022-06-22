@@ -4,10 +4,10 @@ export const signupService = (navigate, signupData, e) => {
   e.preventDefault();
   (async () => {
     try {
-      const response = await axios.post("/api/auth/signup", {
+      const { data, status } = await axios.post("/api/auth/signup", {
         ...signupData,
       });
-      console.log(response);
+      console.log(data, status);
 
       // Navigate to the login page
       navigate("/login");
