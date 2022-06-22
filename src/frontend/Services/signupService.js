@@ -12,7 +12,7 @@ export const signupService = (navigate, signupData, e) => {
       // Navigate to the login page
       navigate("/login");
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
     }
   })();
 };
