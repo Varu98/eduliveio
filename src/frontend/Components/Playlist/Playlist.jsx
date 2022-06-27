@@ -1,19 +1,26 @@
 import React, { useState } from "react";
+import { usePlaylist } from "../../Context/PlaylistContext";
 import NewPlaylistModal from "./NewPlaylistModal";
 import "./Playlist.css";
 import PlaylistContainer from "./PlaylistContainer";
 
 const Playlist = () => {
   const [playlistToggle, setPlaylistToggle] = useState(false);
+  const {
+    playlistsState: { playlists },
+  } = usePlaylist();
   return (
     <div className="playlist-wrapper">
       <div className="playlist-header">
         <h2>My Playlists</h2>
         {playlistToggle ? (
-          <NewPlaylistModal setPlaylistToggle={setPlaylistToggle} />
+          <NewPlaylistModal
+            show={playlistToggle}
+            close={() => setPlaylistToggle(false)}
+          />
         ) : (
           <button
-            onClick={() => setPlaylistToggle((toggle) => !toggle)}
+            onClick={() => setPlaylistToggle(true)}
             className="pd-hr_1 form__btn-submit"
           >
             Create New Playlist
@@ -21,12 +28,9 @@ const Playlist = () => {
         )}
       </div>
       <div className="playlist-container__wrapper">
-        <PlaylistContainer />
-        <PlaylistContainer />
-        <PlaylistContainer />
-        <PlaylistContainer />
-        <PlaylistContainer />
-        <PlaylistContainer />
+        {playlists.map((playlist) => {
+          return <PlaylistContainer playlist={playlist} />;
+        })}
       </div>
     </div>
   );

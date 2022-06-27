@@ -9,6 +9,7 @@ const CategoryChip = () => {
       <div className="category-chips">
         {categoriesData.map(({ categoryName }) => (
           <div
+            key={categoryName}
             onClick={() => {
               console.log("clicked", categoryName);
               filterDispatch({

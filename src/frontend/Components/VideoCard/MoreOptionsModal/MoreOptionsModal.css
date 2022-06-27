@@ -1,15 +1,18 @@
 .option__vertical {
   font-size: 1.3rem;
+}
+.more-options__wrapper {
   position: relative;
 }
 
 .moreOptions {
   display: none;
   position: absolute;
-  margin-top: 1.5rem;
   background-color: #023047;
   min-width: 15rem;
   color: rgb(207, 216, 224);
+  right: 0;
+  margin-right: 1rem;
 }
 .show {
   display: flex;

@@ -23,10 +23,7 @@ const AuthProvider = ({ children }) => {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authState.token]);
-  useEffect(() => {
-    console.log(authState);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authState.token]);
+
   return (
     <authContext.Provider value={{ authState, authDispatch }}>
       {children}

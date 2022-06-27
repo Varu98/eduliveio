@@ -1,15 +1,15 @@
 import React from "react";
 import "./PlaylistContainer.css";
 
-const PlaylistContainer = () => {
+const PlaylistContainer = ({ playlist }) => {
   return (
     <div className="playlist__container">
       <div className="playlist-container__thumbnail">
-        <img src="https://picsum.photos/300/200" alt="" />
+        <img src={playlist.videoToAdd[0].thumbnail_imgUrl} alt="" />
       </div>
-      <span className="playlist__length">1</span>
+      <span className="playlist__length">{playlist.videoToAdd.length}</span>
       <div className="playlist__footer">
-        <span className="playlist__name">Varu's custom Playlist</span>
+        <span className="playlist__name">{playlist.name}</span>
         <span>X</span>
       </div>
     </div>
