@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { usePlaylist } from "../../Context/PlaylistContext";
 import { useAuth } from "../../Context/AuthContext";
 import "./NewPlaylistModal.css";
