@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useContext, useReducer, useEffect } from "react";
 import {
   initialPlaylists,
@@ -15,10 +14,6 @@ const PlaylistProvider = ({ children }) => {
     playlistsReducer,
     initialPlaylists
   );
-
-  const {
-    authState: { token },
-  } = useAuth();
 
   useEffect(() => {
     console.log(playlistsState);
