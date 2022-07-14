@@ -17,10 +17,10 @@ const CategoryChip = () => {
                 payload: categoryName,
               });
             }}
-            class="chip"
+            className="chip"
           >
             {categoryName}
-            <i class="close fas fa-times"></i>
+            <i className="close fas fa-times"></i>
           </div>
         ))}
       </div>

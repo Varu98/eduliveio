@@ -5,6 +5,7 @@
   height: auto;
   position: relative;
   margin: 1rem 0;
+  cursor: pointer;
 }
 .playlist-container__thumbnail {
   width: 100%;

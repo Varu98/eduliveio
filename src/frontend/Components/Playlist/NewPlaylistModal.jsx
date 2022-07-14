@@ -1,27 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePlaylist } from "../../Context/PlaylistContext";
+import { useAuth } from "../../Context/AuthContext";
 import "./NewPlaylistModal.css";
+import { addNewPlaylist } from "../../Services/addNewPlaylist";
+import { removeVideoFromPlaylist } from "../../Services/removeVideoFromPlaylist";
+import { addVideoToPlaylist } from "../../Services/addVideoToPlaylist";
 
 const NewPlaylistModal = ({ video, show, close }) => {
   const { playlistsState, playlistsDispatch } = usePlaylist();
+  const {
+    authState: { token },
+  } = useAuth();
   const { playlists } = playlistsState;
 
   const [savePlaylist, setSavePlaylist] = useState("");
   const createPlaylistHandler = (e) => {
     const { value } = e.target;
     setSavePlaylist(value);
-    console.log(savePlaylist);
+    // console.log(savePlaylist);
   };
 
-  const dispatchPlaylist = () => {
-    playlistsDispatch({
-      type: "ADD_PLAYLIST",
-      payload: { name: savePlaylist, videoToAdd: video },
-    });
+  const videoInPlaylist = (playlist, video) => {
+    // console.log(playlist, video);
+    return playlist.find((item) => item.id === video.id);
   };
 
   const closePlaylistModal = () => {
     close();
+  };
+
+  const checkBoxHandler = (idExists, playlist, video) => {
+    idExists
+      ? removeVideoFromPlaylist(
+          idExists.id,
+          playlist._id,
+          token,
+          playlistsDispatch
+        )
+      : addVideoToPlaylist(video, playlist._id, token, playlistsDispatch);
   };
   return (
     <>
@@ -39,14 +55,28 @@ const NewPlaylistModal = ({ video, show, close }) => {
             </div>
             <div className="playlist-modal__playlists">
               <ul className="flex-col">
-                {playlists.map((playlist) => (
-                  <li>
-                    <label className="flex-row" htmlFor="">
-                      <input type="checkbox" name="" id="" />
-                      {playlist.name}
-                    </label>
-                  </li>
-                ))}
+                {playlists.length > 0 ? (
+                  playlists.map((playlist) => {
+                    const idExists = videoInPlaylist(playlist.videos, video);
+                    console.log("hello", idExists);
+                    return (
+                      <li>
+                        <label className="flex-row" htmlFor="">
+                          <input
+                            type="checkbox"
+                            checked={idExists?.id === video.id}
+                            onChange={() =>
+                              checkBoxHandler(idExists, playlist, video)
+                            }
+                          />
+                          {playlist.title}
+                        </label>
+                      </li>
+                    );
+                  })
+                ) : (
+                  <li>No Playlist Created</li>
+                )}
               </ul>
             </div>
             <label className="flex-col" htmlFor="">
@@ -61,8 +91,8 @@ const NewPlaylistModal = ({ video, show, close }) => {
             </label>
             <button
               onClick={() => {
-                dispatchPlaylist();
-                close();
+                addNewPlaylist(token, savePlaylist, video, playlistsDispatch);
+                console.log(playlistsState);
               }}
               className="mt_1 form__btn-login"
             >

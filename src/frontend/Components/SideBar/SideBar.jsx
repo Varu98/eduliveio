@@ -7,7 +7,7 @@ const SideBar = () => {
   const { filterDispatch } = useVideos();
   return (
     <sideBar>
-      <div style={{ FontFace: "Montserrat" }} class="sidebar__wrapper">
+      <div style={{ FontFace: "Montserrat" }} className="sidebar__wrapper">
         <Link
           onClick={() => {
             filterDispatch({ type: "HOME" });
@@ -16,7 +16,7 @@ const SideBar = () => {
         >
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/Variant8.png"
               alt=""
             />
@@ -31,7 +31,7 @@ const SideBar = () => {
         >
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/ant-design_fire-outlined.png"
               alt=""
             />
@@ -44,7 +44,7 @@ const SideBar = () => {
         <Link to="history">
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/ant-design_history-outlined.png"
               alt=""
             />
@@ -54,7 +54,7 @@ const SideBar = () => {
         <Link to="playlist">
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/ant-design_play-square-outlined.png"
               alt=""
             />
@@ -64,7 +64,7 @@ const SideBar = () => {
         <Link to="likedvideos">
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/ant-design_like-outlined.png"
               alt=""
             />
@@ -74,7 +74,7 @@ const SideBar = () => {
         <Link to="watchlater">
           <span>
             <img
-              class="sidebar__icons"
+              className="sidebar__icons"
               src="./assets/EduLive_icons/ant-design_field-time-outlined.png"
               alt=""
             />

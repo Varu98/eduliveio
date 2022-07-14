@@ -11,18 +11,21 @@ const AuthProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(authReducer, authInitialState);
 
   const getTokenFromLocalStorage = localStorage.getItem("token") || null;
-  const getUserFromLocalStorage = localStorage.getItem("user") || null;
+  const getUserFromLocalStorage = JSON.parse(
+    localStorage.getItem("user") || null
+  );
   useEffect(() => {
     if (getTokenFromLocalStorage !== null && getUserFromLocalStorage !== null)
       authDispatch({
         type: "LOGIN_PERSISTENT",
         payload: {
           token: getTokenFromLocalStorage,
-          user: JSON.parse(getUserFromLocalStorage),
+          user: getUserFromLocalStorage,
         },
       });
+    console.log(authState);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authState.token]);
+  }, []);
 
   return (
     <authContext.Provider value={{ authState, authDispatch }}>

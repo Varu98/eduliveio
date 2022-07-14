@@ -23,10 +23,26 @@ export const playlistsReducer = (state, action) => {
     case "ADD_PLAYLIST":
       return {
         ...state,
-        playlists: [
-          ...state.playlists,
-          { name: payload.name, videoToAdd: [payload.videoToAdd] },
-        ],
+        playlists: [...payload],
+      };
+    case "ADD_VIDEO_TO_PLAYLIST":
+      return {
+        ...state,
+        playlists: state.playlists.map((playlist) =>
+          playlist._id === payload._id ? payload : playlist
+        ),
+      };
+    case "REMOVE_VIDEO_FROM_PLAYLIST":
+      return {
+        ...state,
+        playlists: state.playlists.map((playlist) =>
+          playlist._id === payload._id ? payload : playlist
+        ),
+      };
+    case "DELETE_PLAYLIST":
+      return {
+        ...state,
+        ...payload,
       };
     default:
       return { ...state };

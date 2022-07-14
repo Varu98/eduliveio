@@ -5,7 +5,7 @@ import VideoCard from "../Components/VideoCard/VideoCard";
 import "./Home.css";
 const Home = () => {
   return (
-    <div class="grid-wrapper">
+    <div className="grid-wrapper">
       <BannerVideo />
       <CategoryChip />
       <videoRow>

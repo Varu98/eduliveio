@@ -34,7 +34,7 @@ const MoreOptionsModal = ({ videos }) => {
               >
                 <span className="option__icons-wrapper">
                   <img
-                    class="option__icons"
+                    className="option__icons"
                     src="./assets/EduLive_icons/ant-design_field-time-outlined.png"
                     alt=""
                   />
@@ -52,7 +52,7 @@ const MoreOptionsModal = ({ videos }) => {
               >
                 <span className="option__icons-wrapper">
                   <img
-                    class="option__icons"
+                    className="option__icons"
                     src="./assets/EduLive_icons/ant-design_field-time-outlined.png"
                     alt=""
                   />
@@ -64,7 +64,7 @@ const MoreOptionsModal = ({ videos }) => {
             <li onClick={() => setPlaylistToggle((toggle) => !toggle)}>
               <span className="option__icons-wrapper">
                 <img
-                  class="option__icons"
+                  className="option__icons"
                   src="./assets/EduLive_icons/ant-design_play-square-outlined.png"
                   alt=""
                 />
