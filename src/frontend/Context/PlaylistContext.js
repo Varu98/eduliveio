@@ -3,7 +3,6 @@ import {
   initialPlaylists,
   playlistsReducer,
 } from "../Reducers/playlistReducer";
-import { useAuth } from "./AuthContext";
 
 const { createContext } = require("react");
 const playlistContext = createContext(null);
