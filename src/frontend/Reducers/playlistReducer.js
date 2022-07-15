@@ -44,6 +44,17 @@ export const playlistsReducer = (state, action) => {
         ...state,
         ...payload,
       };
+    case "ADD_VIDEO_TO_LIKED_PLAYLIST":
+      return {
+        ...state,
+        ...payload,
+      };
+    case "DELETE_VIDEO_FROM_LIKED_PLAYLIST":
+      return {
+        ...state,
+        ...payload,
+      };
+
     default:
       return { ...state };
   }
