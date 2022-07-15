@@ -3,6 +3,7 @@ import { useVideos } from "../../Context/VideoContext";
 import "./VideoCard.css";
 import MoreOptionsModal from "./MoreOptionsModal/MoreOptionsModal";
 import { usePlaylist } from "../../Context/PlaylistContext";
+import { Link } from "react-router-dom";
 const VideoCard = () => {
   const { filterVideos } = useVideos();
   const { playlistsDispatch } = usePlaylist();
@@ -27,10 +28,16 @@ const VideoCard = () => {
               }}
               className="thumbnail"
             >
-              <img className="thumbnail__img" src={thumbnail_imgUrl} alt="" />
+              <Link to={`/video/${id}`}>
+                <img
+                  className="thumbnail__img"
+                  src={thumbnail_imgUrl}
+                  alt="thumbnail_imgUrl"
+                />
+              </Link>
             </div>
             <div className="card-body">
-              <img src={author_miniImgUrl} alt="" />
+              <img src={author_miniImgUrl} alt="author_miniImgUrl" />
               <div className="card-footer">
                 <h4>{title}</h4>
                 <MoreOptionsModal videos={videos} />

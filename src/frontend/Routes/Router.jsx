@@ -11,12 +11,14 @@ import LoginPage from "../Auth/LoginPage";
 import { RequiresAuth } from "../Auth/RequiresAuth";
 import { MockMan } from "../Components/Mockman/Mockman";
 import ViewCustomPlaylist from "../Components/Playlist/ViewCustomPlaylist";
+import SingleVideoPage from "../Components/SingleVideoPage/SingleVideoPage";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="filter" element={<Trending />} />
+      <Route path="video/:videoID" element={<SingleVideoPage />} />
       <Route
         path="history"
         element={

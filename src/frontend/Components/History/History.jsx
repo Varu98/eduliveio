@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { usePlaylist } from "../../Context/PlaylistContext";
 import MoreOptionsModal from "../VideoCard/MoreOptionsModal/MoreOptionsModal";
 
@@ -35,14 +36,16 @@ const History = () => {
             return (
               <videoCard className="m-1" key={id}>
                 <div onClick={() => {}} className="thumbnail">
-                  <img
-                    className="thumbnail__img"
-                    src={thumbnail_imgUrl}
-                    alt=""
-                  />
+                  <Link to={`/video/${id}`}>
+                    <img
+                      className="thumbnail__img"
+                      src={thumbnail_imgUrl}
+                      alt="thumbnail img"
+                    />
+                  </Link>
                 </div>
                 <div className="card-body">
-                  <img src={author_miniImgUrl} alt="" />
+                  <img src={author_miniImgUrl} alt="mini img url" />
                   <div className="card-footer">
                     <h4>{title}</h4>
                     <MoreOptionsModal videos={videos} />
