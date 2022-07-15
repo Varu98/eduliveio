@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
 import VideoCard from "../VideoCard/VideoCard";
 import { AiFillLike, AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import "./SingleVideoPage.css";
