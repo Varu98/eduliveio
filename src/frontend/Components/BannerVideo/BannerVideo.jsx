@@ -18,8 +18,8 @@ const BannerVideo = () => {
               <h1>{e.title}</h1>
               <h3>{e.author}</h3>
               <div className="banner__btns">
-                <button class="btns btn-logout">Watch Later</button>
-                <button class="btns btn-login">Play</button>
+                <button className="btns btn-logout">Watch Later</button>
+                <button className="btns btn-login">Play</button>
               </div>
             </div>
             <div className="banner__img-wrapper">

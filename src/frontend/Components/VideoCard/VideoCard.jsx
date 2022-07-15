@@ -25,18 +25,18 @@ const VideoCard = () => {
               onClick={() => {
                 playlistsDispatch({ type: "ADD_TO_HISTORY", payload: videos });
               }}
-              class="thumbnail"
+              className="thumbnail"
             >
-              <img class="thumbnail__img" src={thumbnail_imgUrl} alt="" />
+              <img className="thumbnail__img" src={thumbnail_imgUrl} alt="" />
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <img src={author_miniImgUrl} alt="" />
-              <div class="card-footer">
+              <div className="card-footer">
                 <h4>{title}</h4>
                 <MoreOptionsModal videos={videos} />
-                <span class="views">{views}</span>
-                <span class="upload-time">{timestamp}</span>
-                <span class="author">{author}</span>
+                <span className="views">{views}</span>
+                <span className="upload-time">{timestamp}</span>
+                <span className="author">{author}</span>
               </div>
             </div>
           </videoCard>

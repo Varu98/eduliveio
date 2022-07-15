@@ -9,6 +9,7 @@ const CategoryChip = () => {
       <div className="category-chips">
         {categoriesData.map(({ categoryName }) => (
           <div
+            key={categoryName}
             onClick={() => {
               console.log("clicked", categoryName);
               filterDispatch({
@@ -16,10 +17,10 @@ const CategoryChip = () => {
                 payload: categoryName,
               });
             }}
-            class="chip"
+            className="chip"
           >
             {categoryName}
-            <i class="close fas fa-times"></i>
+            <i className="close fas fa-times"></i>
           </div>
         ))}
       </div>

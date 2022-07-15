@@ -12,16 +12,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <navigation>
-      <div class="logo">
+      <div className="logo">
         <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
           <h2>
             <span>Edu</span>Live.io
           </h2>
         </Link>
       </div>
-      <div class="login-menu">
-        <img class="login-avatar" src="./assets/Group 3.jpg" alt="" />
-        <div class="login-btn__wrapper">
+      <div className="login-menu">
+        <img className="login-avatar" src="./assets/Group 3.jpg" alt="" />
+        <div className="login-btn__wrapper">
           {isLoggedIn ? (
             <button
               onClick={() => {
@@ -30,7 +30,7 @@ const Navbar = () => {
                 authDispatch({ type: "LOGOUT" });
                 navigate("/");
               }}
-              class="btn-logout"
+              className="btn-logout"
             >
               Logout
             </button>
@@ -39,7 +39,7 @@ const Navbar = () => {
               onClick={() => {
                 navigate("/login");
               }}
-              class="btn-login"
+              className="btn-login"
             >
               Login
             </button>
