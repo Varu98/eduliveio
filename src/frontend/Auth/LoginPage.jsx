@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineDoubleRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import { loginService } from "../Services/loginService";
@@ -49,22 +50,38 @@ const LoginPage = () => {
         </fieldset>
         <button
           onClick={(e) => {
-            loginService(e, loginData, navigate, authDispatch);
+            loginService(
+              e,
+              { email: "vardaan.agarwal.98@gmail.com", password: "123" },
+              navigate,
+              authDispatch
+            );
           }}
-          type="submit"
-          className="form__btn-login "
+          className="guest-login"
         >
-          Login
+          <span>Login via test credentials</span>
+          <AiOutlineDoubleRight className="guest-login__icon" />
         </button>
-        <button
-          onClick={() => {
-            navigate("/signup");
-          }}
-          type="click"
-          className="form__btn-submit "
-        >
-          Create New Account
-        </button>
+        <div className="button-wrapper">
+          <button
+            onClick={(e) => {
+              loginService(e, loginData, navigate, authDispatch);
+            }}
+            type="submit"
+            className="form__btn-login "
+          >
+            Login
+          </button>
+          <button
+            onClick={() => {
+              navigate("/signup");
+            }}
+            type="click"
+            className="form__btn-submit "
+          >
+            Create New Account
+          </button>
+        </div>
       </form>
     </div>
   );

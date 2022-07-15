@@ -50,11 +50,13 @@ const ViewCustomPlaylist = () => {
                     return (
                       <videoCard className="m-1" key={id}>
                         <div onClick={() => {}} className="thumbnail">
-                          <img
-                            className="thumbnail__img"
-                            src={thumbnail_imgUrl}
-                            alt=""
-                          />
+                          <Link to={`/video/${id}`}>
+                            <img
+                              className="thumbnail__img"
+                              src={thumbnail_imgUrl}
+                              alt="thumbnail_imgUrl"
+                            />
+                          </Link>
                         </div>
                         <div className="card-body">
                           <img src={author_miniImgUrl} alt="" />

@@ -53,3 +53,8 @@
   justify-content: space-between;
   gap: 2rem;
 }
+.watch-later__button {
+  background: none;
+  border: none;
+  color: white;
+}
