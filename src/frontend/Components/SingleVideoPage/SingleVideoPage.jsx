@@ -48,7 +48,7 @@ const SingleVideoPage = () => {
                         <img
                           style={{ borderRadius: "50%", width: "3rem" }}
                           src={video.author_miniImgUrl}
-                          alt=""
+                          alt="mini-img url"
                         />
                       </span>
                       <span>{video.author}</span>

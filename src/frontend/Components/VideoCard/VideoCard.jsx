@@ -29,11 +29,15 @@ const VideoCard = () => {
               className="thumbnail"
             >
               <Link to={`/video/${id}`}>
-                <img className="thumbnail__img" src={thumbnail_imgUrl} alt="" />
+                <img
+                  className="thumbnail__img"
+                  src={thumbnail_imgUrl}
+                  alt="thumbnail_imgUrl"
+                />
               </Link>
             </div>
             <div className="card-body">
-              <img src={author_miniImgUrl} alt="" />
+              <img src={author_miniImgUrl} alt="author_miniImgUrl" />
               <div className="card-footer">
                 <h4>{title}</h4>
                 <MoreOptionsModal videos={videos} />

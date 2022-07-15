@@ -40,12 +40,12 @@ const History = () => {
                     <img
                       className="thumbnail__img"
                       src={thumbnail_imgUrl}
-                      alt=""
+                      alt="thumbnail img"
                     />
                   </Link>
                 </div>
                 <div className="card-body">
-                  <img src={author_miniImgUrl} alt="" />
+                  <img src={author_miniImgUrl} alt="mini img url" />
                   <div className="card-footer">
                     <h4>{title}</h4>
                     <MoreOptionsModal videos={videos} />
