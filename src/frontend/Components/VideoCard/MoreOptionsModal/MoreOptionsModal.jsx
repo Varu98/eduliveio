@@ -4,10 +4,16 @@ import "./MoreOptionsModal.css";
 import { FiMoreVertical } from "react-icons/fi";
 import { usePlaylist } from "../../../Context/PlaylistContext";
 import NewPlaylistModal from "../../Playlist/NewPlaylistModal";
+import { useAuth } from "../../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 const MoreOptionsModal = ({ videos }) => {
   const [showOptions, setShowOptions] = useState(false);
   const { playlistsState, playlistsDispatch } = usePlaylist();
+  const navigate = useNavigate();
   const [playlistToggle, setPlaylistToggle] = useState(false);
+  const {
+    authState: { isLoggedIn },
+  } = useAuth();
 
   return (
     <div className="more-options__wrapper">
@@ -26,10 +32,12 @@ const MoreOptionsModal = ({ videos }) => {
             ) ? (
               <li
                 onClick={() => {
-                  playlistsDispatch({
-                    type: "REMOVE_FROM_WATCH_LATER",
-                    payload: videos.id,
-                  });
+                  isLoggedIn
+                    ? playlistsDispatch({
+                        type: "REMOVE_FROM_WATCH_LATER",
+                        payload: videos.id,
+                      })
+                    : navigate("/login");
                 }}
               >
                 <span className="option__icons-wrapper">
@@ -44,10 +52,12 @@ const MoreOptionsModal = ({ videos }) => {
             ) : (
               <li
                 onClick={() => {
-                  playlistsDispatch({
-                    type: "SAVE_TO_WATCH_LATER",
-                    payload: videos,
-                  });
+                  isLoggedIn
+                    ? playlistsDispatch({
+                        type: "SAVE_TO_WATCH_LATER",
+                        payload: videos,
+                      })
+                    : navigate("/login");
                 }}
               >
                 <span className="option__icons-wrapper">
@@ -61,7 +71,13 @@ const MoreOptionsModal = ({ videos }) => {
               </li>
             )}
 
-            <li onClick={() => setPlaylistToggle((toggle) => !toggle)}>
+            <li
+              onClick={() => {
+                isLoggedIn
+                  ? setPlaylistToggle((toggle) => !toggle)
+                  : navigate("login");
+              }}
+            >
               <span className="option__icons-wrapper">
                 <img
                   className="option__icons"
