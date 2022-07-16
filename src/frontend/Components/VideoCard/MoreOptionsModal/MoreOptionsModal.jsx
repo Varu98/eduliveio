@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./MoreOptionsModal.css";
-
 import { FiMoreVertical } from "react-icons/fi";
 import { usePlaylist } from "../../../Context/PlaylistContext";
 import NewPlaylistModal from "../../Playlist/NewPlaylistModal";
