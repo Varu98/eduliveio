@@ -1,12 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useVideos } from "../../Context/VideoContext";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 import "./SideBar.css";
+import { useState } from "react";
 
 const SideBar = () => {
   const { filterDispatch } = useVideos();
+  const [sideBarToggle, setSideBarToggle] = useState(false);
   return (
-    <sideBar>
+    <sideBar className={sideBarToggle ? "show__sidebar" : "hide__sidebar"}>
+      <div className="sidebar__toggle">
+        {sideBarToggle ? (
+          <BsFillArrowLeftCircleFill
+            onClick={() => setSideBarToggle(!sideBarToggle)}
+          />
+        ) : (
+          <BsFillArrowRightCircleFill
+            onClick={() => setSideBarToggle(!sideBarToggle)}
+          />
+        )}
+      </div>
       <div style={{ FontFace: "Montserrat" }} className="sidebar__wrapper">
         <Link
           onClick={() => {

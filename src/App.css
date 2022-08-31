@@ -9,6 +9,11 @@
   margin-left: 15rem;
   height: 100vh;
 }
+@media (max-width: 1200px) {
+  .wrapper {
+    margin-left: 0;
+  }
+}
 .grid-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

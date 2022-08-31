@@ -13,7 +13,18 @@
   right: 0;
   top: 1rem;
 }
-
+@media (max-width: 1200px) {
+  .grid-wrapper {
+    margin-left: 0;
+    grid-template-rows: 32rem 5rem 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .grid-wrapper {
+    grid-template-rows: 3rem 5rem 1fr;
+    margin-left: 0;
+  }
+}
 /* Video Thumbnails */
 videoRow {
   grid-row: 3 / span 3;

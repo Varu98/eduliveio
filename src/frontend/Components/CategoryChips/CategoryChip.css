@@ -17,3 +17,9 @@
   background-color: #fb8600;
   color: rgb(255, 255, 255);
 }
+@media (max-width: 1280px) {
+  .category-chips {
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+}
